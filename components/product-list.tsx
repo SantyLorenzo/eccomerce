@@ -15,7 +15,7 @@ export const ProductList: React.FC = () => {
     if (allProducts && displayedProducts.length === 0) {
       setDisplayedProducts(allProducts.slice(0, 3));
     }
-  }, [allProducts]);
+  }, [allProducts, displayedProducts.length]);
 
   const filteredProducts = displayedProducts.filter(product =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
