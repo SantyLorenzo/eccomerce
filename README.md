@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Somnio React Challenge
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Objetivo
+El objetivo de este challenge es poder evaluar correctamente tus
+conocimientos en React y tu enfoque en la componentización de la solución
+propuesta.
 
-## Learn More
+Es importante que apliques tus mejores prácticas y, si tomas alguna decisión
+que consideres que se aparta de las buenas prácticas, nos expliques el
+porqué. Además, valoraremos positivamente la creación de tests unitarios.
+# Consigna:
+Realizar una tienda de compras en React, utilizando Next JS como framework
+para la creación de la misma. https://nextjs.org/
 
-To learn more about Next.js, take a look at the following resources:
+Para los productos a mostrar te proporcionamos la siguiente API:
+https://fakestoreapi.com/products
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Además te proporcionamos el diseño de las 2 pantallas a implementar,
+buscamos que lleves este diseño a la realidad, lo más fiel posible pero sin
+entrar en grandes detalles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Página Principal
+En la pantalla principal (home) encontrarás un header, con su logo, una barra
+de búsqueda y un badge e ícono con la cantidad de items agregados al
+carrito.
 
-## Deploy on Vercel
+A su vez tendrás tarjetas por cada 1 de los productos, donde cada tarjeta
+mostrará título, descripción, precio y tendrá un botón de acción para agregar
+este producto al carrito.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Cada vez que se agregue un producto al carrito deberás reflejar su cantidad
+al carrito global ubicado en el header y a su vez mantener sincronizados
+estos mismos con la vista “Carrito de Compras”.
+Además la página principal tiene un buscador, esperamos que este buscador
+funcione a modo de filtro sobre los productos que ya fueron cargados en la
+página.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+También disponemos de un botón “VER MÁS” que permite solicitar más
+productos (la idea es implementar un paginado local). Por defecto sólo se
+muestran 3 productos (1 fila).
+
+# Carrito de Compras:
+El usuario navegará a la vista de carrito de compras haciendo click en el
+ícono del carrito
+La misma mostrará el detalle de los productos incluido en el mismo (Cantidad,
+Titulo, Importe total)
+El botón “Seguir Comprando” permitirá volver a visualizar la página principal.
+
+# Consideraciones importantes:
+Para realizar la aplicación deberás tomar decisiones técnicas cómo:
+
+● Mantener el estado de la aplicación (productos, carrito, items
+agregados, etc).
+
+● Utilizar un framework de estilos (SASS, LESS, Styled Components,
+Tailwind, Pure Css, etc).
+
+● Mantener la página principal actualizada con los últimos productos.
+
+● Decidir cómo vas a comunicar al usuario cualquier error ocurrido en la
+app.
+
+● Implementar Custom Hooks de ser necesario.
+
+● Implementar Paginado Local.
+
+Hay algunos puntos de UX que han sido dejados de lado dentro de la
+experiencia propuesta, pero nos gustaría que al menos identifiques e intentes
+implementar alguno.
