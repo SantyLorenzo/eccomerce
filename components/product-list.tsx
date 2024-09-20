@@ -5,6 +5,7 @@ import { ProductCard } from './product-card';
 import { Product, useCartStore } from '@/stores/cartStore';
 import { useProducts } from '@/hooks/useProducts';
 import { EyeIcon, LoaderCircle } from 'lucide-react';
+import toast from 'react-hot-toast';
 
 export const ProductList: React.FC = () => {
   const searchTerm = useCartStore(state => state.searchTerm);
@@ -38,8 +39,15 @@ export const ProductList: React.FC = () => {
   }
 
   if (error) {
+    toast.error('Ocurrio un error con los productos, recarga la pagina.');
+
     return (
-      <p className='text-gray-800'>Error loading products. Please try again later.</p>
+      <button
+        onClick={() => window.location.reload()}
+        className="min-w-64 flex justify-center gap-4 border-black bg-white text-black font-bold py-2 px-4 rounded disabled:bg-gray-400"
+      >
+        Recargar pagina
+      </button>
     )
   }
 
